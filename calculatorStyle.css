@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    height: 600px;
+    background-color: midnightblue;
+    border-radius: 15px;
+}
+
+.header {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+.r-header {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.digits {
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digits > .text {
+    font-size: 15px;
+}
+
+.digit, .text {
+    line-height: 0.7;
+}
+
+.calculator-name {
+    background-color: green;
+}
+
+.solar {
+    background-color: yellow;
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.display {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+    border-bottom: 5px dashed red;
+}
+
+.display .decorator {
+    width: 400px;
+    height: 90px;
+    background-color: blue;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-content {
+    height: 70px;
+    width: 340px;
+    border-radius: 10px;
+    background-color: tomato;
+}
+
+.divider {
+    background-color: tomato;
+    height: 50px;
+}

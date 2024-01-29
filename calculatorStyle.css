@@ -12,12 +12,43 @@ body {
 }
 
 .container {
+    position: relative;
     width: 500px;
     height: 700px;
     background-color: midnightblue;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: red;
+    transform: translate3d(0, .6em, -1em);
+    z-index: -1;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    transform: rotateY(10deg);
+    box-shadow: 15px 15px 11px 5px rgba(0, 0, 0, 0.4);
+    z-index: -2;
 }
 
 .header {

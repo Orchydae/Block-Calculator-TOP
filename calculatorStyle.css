@@ -16,6 +16,8 @@ body {
     height: 600px;
     background-color: midnightblue;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -92,4 +94,21 @@ body {
 .divider {
     background-color: tomato;
     height: 50px;
+}
+
+.buttons {
+    background-color: green;
+    flex: 1;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+#plus, #equal {
+    grid-row: span 2;
+}
+
+#zero {
+    grid-column: span 2;
 }

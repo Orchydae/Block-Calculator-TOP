@@ -5,7 +5,7 @@ html, body {
 
 body {
     min-height: 100vh;
-    background-color: aliceblue;
+    background-color: #F5EBE0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@ body {
     height: inherit;
     border-radius: inherit;
     transform: rotateY(10deg);
-    box-shadow: 15px 15px 11px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 15px 15px 5px rgba(0, 0, 0, 0.4);
     z-index: -2;
 }
 
@@ -134,7 +134,7 @@ body {
     border-radius: 0px 0px 15px 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 15px;
     padding: 35px 30px 45px 30px;
 }
 
@@ -144,6 +144,24 @@ button {
     border: none;
     transform-style: preserve-3d;
     transition: .15s cubic-bezier(0, 0, .6, 1);
+    background-color: #DDD3C9;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    box-shadow: inset -5px -5px 5px -5px gray, 0 0 0 1px gray;
+
 }
 
 button::before {
@@ -157,19 +175,18 @@ button::before {
     height: 100%;
     border-radius: inherit;
     background: gray;
-    box-shadow: 0 0 0 2px gray, 0 .625em 5px 0 blue;
-    transform: translate3d(0, .75em, -1em);
+    box-shadow: 0 0 0 1px gray, 0 .5em 2px 0 darkslategray;
+    transform: translate3d(0, .4em, -0.5em);
     transition: .15s cubic-bezier(0, 0, .6, 1);
 }
 
 button:hover {
-    background: pink;
-    transform: translate(0, .25em)
+    background: darkgray;
 }
 
 button:hover::before {
-    box-shadow: 0 0 0 2px gray, 0 .5em 5px 0 blue;
-    transform: translate3d(0em, .5em, -1em);
+    box-shadow: 0 0 0 1px gray, 0 .5em 2px 0 darkslategray;
+    transform: translate3d(0em, .4em, -0.5em);
 }
 
 button:active {
@@ -178,8 +195,8 @@ button:active {
 }
 
 button:active::before {
-    box-shadow: 0 0 0 2px gray, 0 .625em 5px 0 blue;
-    transform: translate3d(0, 0, -1em);
+    box-shadow: 0 0 0 2px gray, 0 .3em 1px 0 darkslategray;
+    transform: translate3d(0, 0, -0.5em);
 }
 
 #plus, #equal {

@@ -132,10 +132,11 @@ button {
     border: none;
     transform-style: preserve-3d;
     transition: .15s cubic-bezier(0, 0, .6, 1);
-    background-color: #DDD3C9;
+    background-color: #D9CFC5;
     color: whitesmoke;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.9);
 }
 
 button::after {
@@ -185,6 +186,17 @@ button:active {
 button:active::before {
     box-shadow: 0 0 0 2px gray, 0 .3em 1px 0 darkslategray;
     transform: translate3d(0, 0, -0.5em);
+}
+
+#MRC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RC {
+    font-size: 17px;
+    line-height: 12px;
 }
 
 #plus, #equal {

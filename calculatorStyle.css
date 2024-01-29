@@ -15,7 +15,7 @@ body {
     position: relative;
     width: 500px;
     height: 700px;
-    background-color: midnightblue;
+    background-color: #16001E;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -61,14 +61,13 @@ body {
 }
 
 .r-header {
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .digits {
-    background-color: pink;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,33 +81,35 @@ body {
     line-height: 0.7;
 }
 
-.calculator-name {
-    background-color: green;
-}
-
 .solar {
-    background-color: yellow;
+    background-color: darkgray;
     width: 150px;
     height: 40px;
     margin: 10px;
     border-radius: 5px;
+    box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to right,
+        rgba(64,64,64,0.6) 0%, rgba(64,64,64,0.9) 25%,
+        rgba(64,64,64,0.75) 25%, rgba(64,64,64,0.9) 50%,
+        rgba(64,64,64,0.75) 50%, rgba(64,64,64,0.9) 75%,
+        rgba(64,64,64,0.75) 75%, rgba(64,64,64,0.9) 100%);
 }
 
 .display {
-    background-color: white;
+    background-color: 16001E;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
     padding-bottom: 20px;
-    border-bottom: 5px dashed red;
+    border-bottom: 5px solid red;
 }
 
 .display .decorator {
     width: 400px;
     height: 90px;
-    background-color: blue;
+    background-color: #9EA2D4;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -119,18 +120,18 @@ body {
     height: 70px;
     width: 340px;
     border-radius: 10px;
-    background-color: tomato;
+    background-color: #DEECEB;
 }
 
 .divider {
-    background-color: tomato;
+    background-color: #16001E;
     height: 50px;
 }
 
 .buttons {
-    background-color: green;
+    background-color: #F5EBE0;
     flex: 1;
-    border-radius: 15px;
+    border-radius: 0px 0px 15px 15px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
@@ -155,8 +156,8 @@ button::before {
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background: red;
-    box-shadow: 0 0 0 2px yellow, 0 .625em 0 0 blue;
+    background: gray;
+    box-shadow: 0 0 0 2px gray, 0 .625em 5px 0 blue;
     transform: translate3d(0, .75em, -1em);
     transition: .15s cubic-bezier(0, 0, .6, 1);
 }
@@ -167,7 +168,7 @@ button:hover {
 }
 
 button:hover::before {
-    box-shadow: 0 0 0 2px yellow, 0 .5em 0 0 blue;
+    box-shadow: 0 0 0 2px gray, 0 .5em 5px 0 blue;
     transform: translate3d(0em, .5em, -1em);
 }
 
@@ -177,7 +178,7 @@ button:active {
 }
 
 button:active::before {
-    box-shadow: 0 0 0 2px yellow, 0 .625em 0 0 blue;
+    box-shadow: 0 0 0 2px gray, 0 .625em 5px 0 blue;
     transform: translate3d(0, 0, -1em);
 }
 
@@ -191,4 +192,8 @@ button:active::before {
 
 #arrow, #AC, #OFF, #ON {
     height: 35px;
+}
+
+#OFF, #ON {
+    background-color: red;
 }

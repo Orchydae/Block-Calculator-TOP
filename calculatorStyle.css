@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 500px;
-    height: 600px;
+    height: 700px;
     background-color: midnightblue;
     border-radius: 15px;
     display: flex;
@@ -103,6 +103,51 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+    padding: 35px 30px 45px 30px;
+}
+
+button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transform-style: preserve-3d;
+    transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: red;
+    box-shadow: 0 0 0 2px yellow, 0 .625em 0 0 blue;
+    transform: translate3d(0, .75em, -1em);
+    transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button:hover {
+    background: pink;
+    transform: translate(0, .25em)
+}
+
+button:hover::before {
+    box-shadow: 0 0 0 2px yellow, 0 .5em 0 0 blue;
+    transform: translate3d(0em, .5em, -1em);
+}
+
+button:active {
+    background: red;
+    transform: translate(0, .75em)
+}
+
+button:active::before {
+    box-shadow: 0 0 0 2px yellow, 0 .625em 0 0 blue;
+    transform: translate3d(0, 0, -1em);
 }
 
 #plus, #equal {
@@ -111,4 +156,8 @@ body {
 
 #zero {
     grid-column: span 2;
+}
+
+#arrow, #AC, #OFF, #ON {
+    height: 35px;
 }

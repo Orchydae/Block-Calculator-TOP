@@ -21,21 +21,6 @@ body {
     flex-direction: column;
 }
 
-.container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-    background: red;
-    transform: translate3d(0, .6em, -1em);
-    z-index: -1;
-}
-
 .container::before {
     content: "";
     position: absolute;
@@ -47,6 +32,8 @@ body {
     height: inherit;
     border-radius: inherit;
     transform: rotateY(10deg);
+    background: darkgray;
+    transform: translate3d(0, .6em, -1em);
     box-shadow: 5px 15px 15px 5px rgba(0, 0, 0, 0.4);
     z-index: -2;
 }
@@ -114,13 +101,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 15px 5px 5px -5px #8E91BB, 1px 1px 1px 1px gray;
 }
 
 .display-content {
     height: 70px;
     width: 340px;
     border-radius: 10px;
-    background-color: #DEECEB;
+    background-color: #E2D8CE;
 }
 
 .divider {

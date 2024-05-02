@@ -169,6 +169,36 @@ button::before {
     transition: .15s cubic-bezier(0, 0, .6, 1);
 }
 
+#four::before {
+    background: red;
+    transform: translate3d(0, .4em, -0.5em);
+}
+
+#five::before {
+    background: orange;
+    transform: translate3d(0, .4em, -0.5em);
+}
+
+#six::before {
+    background: yellow;
+    transform: translate3d(0, .4em, -0.5em);
+}
+
+#one::before {
+    background: green;
+    transform: translate3d(0, .4em, -0.5em);
+}
+
+#two::before {
+    background: blue;
+    transform: translate3d(0, .4em, -0.5em);
+}
+
+#three::before {
+    background: indigo;
+    transform: translate3d(0, .4em, -0.5em);
+}
+
 button:hover {
     background: darkgray;
 }
